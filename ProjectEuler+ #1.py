@@ -10,7 +10,7 @@ for a0 in range(t):
     five = int((n-1)/5) #gives count of numbers divisible by 5 upto (n-1)
     fifteen = int((n-1)/15) #gives count of numbers divisible by 15 upto (n-1)
     
-    #sum of arithmetic equation formula = n/2(a + (n - 1)d)
+    #sum of arithmetic equation formula = n/2(2a + (n - 1)d)
     #here a == d
     #so we  can write this formula as = (a * n * (n-1))/2
     
