@@ -1,22 +1,22 @@
  
-#!/bin/python3
+palindromelist = []
+for i in range(100, 1000):
+    for j in range(100, 1000):
+        a = i * j
+        if str(a) == str(a)[::-1] and a not in palindromelist:
+            palindromelist.append(a)
+palindromelist.sort()
+length = len(palindromelist)
 
-import sys
 
-
-T = int(input())
-for z in range(T):
-    N = int(input())
-    i = 2
-    largest_prime = 2
-    while i <= N:
-        while N % i == 0:
-            largest_prime = i
-            N //= i    
-        i += 1
-    if N>largest_prime:
-        largest_prime = N
-    print(largest_prime)    
+if __name__ == '__main__':
+    n = int(input())
+    for _ in range(n):
+        a = int(input())
+        for i in range(length - 1, -1, -1):
+            if palindromelist[i] < a:
+                print(palindromelist[i])
+                break  
 
 
         
