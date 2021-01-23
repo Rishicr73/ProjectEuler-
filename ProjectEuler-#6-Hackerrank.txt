@@ -1,0 +1,16 @@
+#!/bin/python3
+
+import sys
+
+
+t = int(input().strip())
+for a0 in range(t):
+    n = int(input().strip())
+    t = (n * (n + 1))//2
+    j= n*(n+1)*(2*n+1)//6
+    print((t*t) - j)
+
+
+#HINT:
+SUM OF SQUARES OF NATURAL NUMBER = n(n+1)(2n + 1)/6
+sum of n natural number = n(n+1)/2 then square it 
