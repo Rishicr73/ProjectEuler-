@@ -1,0 +1,14 @@
+t = int(input().strip())
+for a0 in range(t):
+    n,k = input().strip().split(' ')
+    n,k = [int(n),int(k)]
+    num = input().strip()
+    
+    l = [] #we have taken this list to just simplified the solution
+
+    for i in range(n - k):
+        m = 1
+        for j in num[i:i+k]: #Here we have taker slicing for ex[1:6] slicing method
+            m *= int(j)
+        l.append(m) #then we add the the product to the list and then find maximum value of that list   
+    print(max(l)) 
