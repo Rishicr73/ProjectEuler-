@@ -1,0 +1,21 @@
+#This question is little bit tough for me because in this sieve algorithm is used and i learnt it upto 80% 
+x = 110000
+primes = [1]*x #Here we have taken this because we have to print 1 in all indices upto 110000
+primes[0] = 0 #Here we have given the value of indices 0f 0 and 1 is =0
+
+primes[1] = 0
+p = 2 #we have taken this from two becoz primes number starts from two
+while p*p <= x : 
+    if p != 0 :
+        for i in range(p*2, x, p): #Here we have giving multiples of p as 0
+            primes[i] = 0
+    p += 1
+primeNos = []
+for i in range( len(primes)):
+    if primes[i] != 0 : #Here we were removing all zero's and adding them in a new list 
+
+        primeNos.append(i)
+
+for _ in range(int(input())):
+    n = int(input())
+    print(primeNos[n-1])
